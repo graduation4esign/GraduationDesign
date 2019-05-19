@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>briup安全中心</title>
+<title>个人信息中心</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/icons.css" />
@@ -27,9 +27,9 @@
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index.jsp">退出</a>|</li>
-                <li><a href="confirmList.jsp">我的订单<span class="jt_down"></span></a>|</li>
-                <li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+            	<li><a href="index">退出</a>|</li>
+                <li><a href="confirmList">我的订单<span class="jt_down"></span></a>|</li>
+                <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
     <div class="nav_top">
     	<div class="nav_top_center">
             <div>
-                全部图书分类
+                全部化妆品分类
             </div>
             <ul>
                <li><a href="list.html">文学类</a></li>
@@ -201,7 +201,7 @@
                 <a href="#">友情链接</a>|
                 <a href="#">供货商入驻</a> 
            	</p>
-            <p>沪ICP备14033591号-8 杰普briup.com版权所有 杰普软件科技有限公司 </p>
+            <p>江西理工大学南昌校区美妆网版权所有 </p>
           	<img src="images/police.png">
         </div>
     </div>

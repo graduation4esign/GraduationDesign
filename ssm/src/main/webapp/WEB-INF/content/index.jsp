@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>briup电子商务-首页</title>
+<title>美妆网-首页</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/icons.css" />
@@ -15,12 +15,12 @@
 	<div class="top">
     	<div class="top_center">
     		<ul class="top_lr">
-            	<li><a href="tologin" style="color: red;">亲,请登入</a></li>
-                <li><a href="toregister">免费注册</a></li>
+            	<li><a href="login" style="color: purple;">亲,请登入</a></li>
+                <li><a href="register">免费注册</a></li>
             </ul>
             <ul class="top_bars">
-                <li><a href="confirmList.html">我的订单<span class="jt_down"></span></a>|</li>
-                <li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+                <li><a href="login">我的订单<span class="jt_down"></span></a>|</li>
+                <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
         </div>
@@ -31,7 +31,7 @@
     	<div class="h3_center">
         	<div class="search_box">
             	<input type="text"/>
-                <span>搜索</span>
+                <a href=""><span>搜索</span></a>
             </div>
             <p>
             	<a href="list.html">文学类</a>|
@@ -43,11 +43,11 @@
         </div>
         <div class="h3_right">
         	<div class="myyy">
-            	<a href="userinfo.jsp">个人信息</a>
+            	<a href="login">个人信息</a>
                 <span class="sj_down"></span>
              </div>
             <div class="tsc">
-           	  <a href="emptyCar.jsp">去购物车结算</a>
+           	  <a href="shopCart">去购物车结算</a>
               <span class="sj_right"> </span>
             </div>
         </div>
@@ -56,7 +56,7 @@
     <div class="nav_top">
     	<div class="nav_top_center">
             <div>
-                全部图书分类
+                全部化妆品分类
             </div>
             <ul>
                 <li><a href="list.html">文学类</a></li>
@@ -129,30 +129,30 @@
             </div>
             <div class="c3_b1_center">
             	<div>
-                	<a href="viewBook.jsp"><img src="images/ad1.png"></a>
+                	<a href="viewBook.jsp"><img src="images/ad1.jpg"></a>
                 </div>
                 <div class="c3_b1_c_bottom">
                     <ul>
                         <li>
-                           <a href="viewBook.html"><img src="images/p01.png"/></a>
-                           <a href="viewBook.html">Java从入门到精通</a>  
+                           <a href="viewBook.html"><img src="images/p01.jpg"/></a>
+                           <a href="viewBook.html">持妆粉底液</a>  
                         </li>
                        <li>
-                           <a href="viewBook.html"><img src="images/p01.png"/></a> 
-                           <a href="viewBook.html">Java从入门到精通</a> 
+                           <a href="viewBook.html"><img src="images/p01.jpg"/></a> 
+                           <a href="viewBook.html">持妆粉底液</a> 
                         </li>
                         <li>
-                           <a href="viewBook.html"><img src="images/p01.png"/></a> 
-                           <a href="viewBook.html">Java从入门到精通</a> 
+                           <a href="viewBook.html"><img src="images/p01.jpg"/></a> 
+                           <a href="viewBook.html">持妆粉底液</a> 
                         </li>
                     </ul>
             	</div>
             </div>
             <div class="c3_b1_right">
-            	<h1>杰普快报</h1>
+            	<h1>热卖商品</h1>
             	<ul>
-                	<li><a href="detail.html">〈加措〉相信这一切都是对我们最好的安排  </a></li>
-                	<li><a href="detail.html">〈加措〉相信这一切都是对我们最好的安排  </a></li>
+                	<li><a href="detail.html">〈热〉新款持妆粉底  </a></li>
+                	<li><a href="detail.html">〈热〉Chanel新款丝绒口红  </a></li>
                 </ul>
             </div>
             <div style="clear:both"></div>
@@ -220,7 +220,7 @@
                 <a href="#">友情链接</a>|
                 <a href="#">供货商入驻</a> 
            	</p>
-            <p>沪ICP备14033591号-8 杰普briup.com版权所有 杰普软件科技有限公司 </p>
+            <p>江西理工大学南昌校区美妆网版权所有 </p>
           	<img src="images/police.png">
         </div>
     </div>

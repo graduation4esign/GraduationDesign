@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>briup电子商务-首页</title>
+<title>美妆网-首页</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/icons.css" />
@@ -65,9 +65,9 @@ function addShopCart(bookname){
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index.jsp">退出</a>|</li>
-                <li><a href="confirmList.html">我的订单<span class="jt_down"></span></a>|</li>
-                <li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+            	<li><a href="index">退出</a>|</li>
+                <li><a href="confirmList">我的订单<span class="jt_down"></span></a>|</li>
+                <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
         </div>
@@ -96,7 +96,7 @@ function addShopCart(bookname){
     <div class="nav_top">
     	<div class="nav_top_center">
             <div>
-                全部图书分类
+                全部化妆品分类
             </div>
             <ul>
                 <li><a href="list.html">文学类</a></li>
@@ -196,16 +196,16 @@ function addShopCart(bookname){
             <div class="c5_b2_right">
               	<div class="c5_b2_right_2">
                     	<h1>正品行货</h1>
-                        <p>briup网上商城向您保证所售商品均为正品，briup自营商品开具机打发票或电子发票。</p>
+                        <p>美妆网向您保证所售商品均为正品，美妆网商品开具机打发票或电子发票。</p>
                         
                         <h1>全国联保</h1>
-                        <p>凭质保证书及briup网上商城发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。briup网上商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p>
+                        <p>凭质保证书及美妆网发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。美妆网还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p>
                         
                         <h1>正品行货</h1>
-                        <p>briup网上商城向您保证所售商品均为正品，briup自营商品开具机打发票或电子发票。</p>
+                        <p>美妆网向您保证所售商品均为正品，美妆网商品开具机打发票或电子发票。</p>
                         
                         <h1>全国联保</h1>
-                        <p>凭质保证书及briup网上商城发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。briup网上商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p>
+                        <p>凭质保证书及美妆网发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。美妆网还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p>
                         
             		</div> 
             </div>
@@ -300,7 +300,7 @@ function addShopCart(bookname){
                 <a href="#">友情链接</a>|
                 <a href="#">供货商入驻</a> 
            	</p>
-            <p>沪ICP备14033591号-8 杰普briup.com版权所有 杰普软件科技有限公司 </p>
+            <p>江西理工大学南昌校区美妆网版权所有 </p>
           	<img src="images/police.png">
         </div>
     </div>

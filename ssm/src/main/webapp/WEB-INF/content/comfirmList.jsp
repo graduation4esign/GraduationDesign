@@ -112,16 +112,16 @@ input{
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index.html">退出</a>|</li>
+            	<li><a href="index">退出</a>|</li>
                 <li style="background-color:#70A3CE"><a href="javascript:void(0)">我的订单</a>|</li>
-                <li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+                <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
         </div>
     </div>
     <!--头部-->
     <div class="header3">
-    	<a href="index.jsp"><img src="images/logo.png"  class="oneImg"></a>
+    	<a href="index"><img src="images/logo.png"  class="oneImg"></a>
        
     </div>
     
@@ -132,7 +132,7 @@ input{
 			<span style="margin-left: 70px">${orderId}</span>
 		</div>
 		<div class="rightt">
-			<span><a href="confirm.jsp"><button>去支付</button></a></span>
+			<span><a href="confirm"><button>去支付</button></a></span>
 			<span><a href="todelorder"><button>删除订单</button></a></span>
 			<span>数量</span>
 			<span  style="margin-right: 0px">总价</span>
@@ -282,7 +282,7 @@ input{
                 <a href="#">友情链接</a>|
                 <a href="#">供货商入驻</a> 
            	</p>
-            <p>沪ICP备14033591号-8 杰普软件briup.com版权所有 杰普软件科技有限公司 </p>
+            <p>江西理工大学南昌校区美妆网版权所有 </p>
           	<img src="images/police.png">
         </div>
     </div>

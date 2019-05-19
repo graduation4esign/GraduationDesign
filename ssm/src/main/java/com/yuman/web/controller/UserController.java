@@ -26,7 +26,7 @@ public class UserController {
 	public String login(SUser user, HttpSession session) {
 		if (userService.login(user)) {
 			session.setAttribute("user", user);
-			return "/index";
+			return "/indexSuccess";
 		}
 		return "/login";
 	}
@@ -42,7 +42,7 @@ public class UserController {
 		int i = userService.register(user);
 		if (i == 1) {
 			session.setAttribute("user", user);
-			return "/index";
+			return "/indexSuccess";
 		}
 		return "/register";
 	}

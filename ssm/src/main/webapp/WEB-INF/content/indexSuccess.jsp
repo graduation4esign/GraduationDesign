@@ -1,6 +1,6 @@
-<%@page import="com.briup.bean.CategoryDetail"%>
+
 <%@page import="java.util.List"%>
-<%@page import="com.briup.service.impl.CategoryDetailServiceImpl"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>briup电子商务-首页</title>
+<title>美妆网-首页</title>
 <link rel="stylesheet" href="css/common.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/icons.css" />
@@ -24,7 +24,7 @@
 			<ul class="top_bars">
 				<li><a href="index.jsp">退出</a>|</li>
 				<li><a href="#">我的订单<span class="jt_down"></span></a>|</li>
-				<li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
 			</ul>
 		</div>
@@ -43,7 +43,7 @@
 				<a href="userinfo.jsp">个人信息</a> <span class="sj_down"></span>
 			</div>
 			<div class="tsc">
-				<a href="toshopcart">去购物车结算</a> <span class="sj_right"></span>
+				<a href="shopCart">去购物车结算</a> <span class="sj_right"></span>
 			</div>
 		</div>
 	</div>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="c3_b1_center">
 				<div>
-					<a href="viewbook.jsp"><img src="images/ad1.png"></a>
+					<a href="viewbook.jsp"><img src="images/ad1.jpg"></a>
 				</div>
 				<div class="c3_b1_c_bottom">
 					<ul>
@@ -94,24 +94,24 @@
 			</div>
 			<div class="c3_b1_right">
 				<h1>
-					杰普快报<a href="#">更多</a>
+					热卖商品<a href="#">更多</a>
 				</h1>
 				<ul>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
-					<li><a href="#">〈加措〉相信这一切都是对我们最好的安排 </a></li>
+					<li><a href="#">〈热〉新款持妆粉底  </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红</a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
 				</ul>
 			</div>
 			<div style="clear: both"></div>
@@ -177,7 +177,7 @@
 				<a href="#">关于我们</a>| <a href="#">联系我们</a>| <a href="#">友情链接</a>| <a
 					href="#">供货商入驻</a>
 			</p>
-			<p>沪ICP备14033591号-8 杰普briup.com版权所有 杰普软件科技有限公司</p>
+			<p>江西理工大学南昌校区美妆网版权所有</p>
 			<img src="images/police.png">
 		</div>
 	</div>

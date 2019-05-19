@@ -1,29 +1,27 @@
 /* CSS Document */
-/**-------鐧婚檰椤甸潰-------**/
+/**-------閻у妾版い鐢告桨-------**/
 .header1{
 	width:1020;
 	margin:0 auto;
 }
 .header1 img{
 	margin:12px 0;
-	height:100px;
-	width:230px;
 }
 .content1{
-	background-color:#63be8f;	
+	background-color:#CDBDBE;	
 }
 .content1 .c1_box1{
 	width:1020px;
 	height:602px;
 	margin:0 auto;
 	background:url(../images/bg_login.png) no-repeat center;
-	position:relative;/*鐩稿瀹氫綅*/
+	position:relative;/*閻╃顕�规矮缍�*/
 }
-/*鐧婚檰妗�*/
+/*閻у妾板锟�*/
 .content1 .login_box{
 	width:385px;
 	background-color:#FFF;
-	position:absolute;/*缁濆瀹氫綅*/
+	position:absolute;/*缂佹繂顕�规矮缍�*/
 	top:110px;
 	right:0px;
 }
@@ -124,7 +122,7 @@ span.pwd_icon{
 	margin:10px auto 70px auto;	
 }
 
-/**-----娉ㄥ唽椤甸潰-----**/
+/**-----濞夈劌鍞芥い鐢告桨-----**/
 .container2{
 	background-color:#f2f2f2;
 	
@@ -167,12 +165,12 @@ span.pwd_icon{
 	padding-left:45px;
 }
 
-.header2 ul.tabs li.current{/*褰撳墠閫変腑鐨勬寜閽�*/
+.header2 ul.tabs li.current{/*瑜版挸澧犻柅澶夎厬閻ㄥ嫭瀵滈柦锟�*/
 	border-top:2px solid #c5131e;
 	background-color:#FFF;
 }
 .header2 .tlg{
-	position:absolute;/*缁濆瀹氫綅锛岀浉瀵逛簬header2*/
+	position:absolute;/*缂佹繂顕�规矮缍呴敍宀�娴夌�甸�涚艾header2*/
 	bottom:0px;
 	right:110px;
 	height:40px;
@@ -250,8 +248,8 @@ span.pwd_icon{
 }
 
 
-/**--------------棣栭〉------------**/
-/*棣栭〉澶撮儴寮�濮�*/
+/**--------------妫ｆ牠銆�------------**/
+/*妫ｆ牠銆夋径鎾劥瀵拷婵拷*/
 .top{
 	border:1px solid #ececec;	
 }
@@ -306,7 +304,7 @@ span.pwd_icon{
 	margin:30px 0 0 10px;	
 }
 .header3 .search_box{
-	border:1px solid #c5131e;
+	border:1px solid #673ecb;
 	overflow:hidden;
 }
 .header3 .search_box input{
@@ -319,7 +317,7 @@ span.pwd_icon{
 	float:left;
 	width:84px;
 	height:34px;
-	background-color:#c5131e;
+	background-color:#673ecb;
 	line-height:34px;
 	text-align:center;
 	font-size:14px;
@@ -370,7 +368,7 @@ span.pwd_icon{
 	float:left;
 	width:194px;
 	height:36px;
-	background-color:#c5000c;
+	background-color:#673ecb;
 	padding-left:16px;
 	text-align:left;
 	line-height:36px;
@@ -391,8 +389,8 @@ span.pwd_icon{
 .nav_top_center li a{
 	color:#333333;
 }
-/*棣栭〉澶撮儴缁撴潫*/
-/*棣栭〉鍐呭绗竴琛屽紑濮�*/
+/*妫ｆ牠銆夋径鎾劥缂佹挻娼�*/
+/*妫ｆ牠銆夐崘鍛啇缁楊兛绔寸悰灞界磻婵拷*/
 .container3,.container4{
 	width:1200px;
 	margin:0 auto;	
@@ -439,18 +437,18 @@ span.pwd_icon{
 }
 .c3_b1_c_bottom{
 	border:1px solid #eeeeee;
-	height:203px;
+	height:260px;
 }
 .c3_b1_c_bottom ul{
 	overflow:hidden;
-	width:624px;
+	width:768px;
 	margin:0 auto;
 	position:relative;
 }
 .c3_b1_c_bottom ul li{
 	float:left;
-	width:208px;
-	height:203px;
+	width:256px;
+	height:260px;
 }
 
 .c3_b1_c_bottom ul li a+a{
@@ -459,7 +457,7 @@ span.pwd_icon{
 	padding-left: 30px;
 }
 
-.sw1{/*瀹藉害1px鍒嗗壊绾�*/
+.sw1{/*鐎硅棄瀹�1px閸掑棗澹婄痪锟�*/
 	float:left;
 	width:1px;
 	height:203px;
@@ -467,7 +465,7 @@ span.pwd_icon{
 	left:208px;
 	background-color: #eeeeee;
 }
-.sw2{/*瀹藉害1px鍒嗗壊绾�*/
+.sw2{/*鐎硅棄瀹�1px閸掑棗澹婄痪锟�*/
 	float:left;
 	width:1px;
 	height:203px;
@@ -478,9 +476,9 @@ span.pwd_icon{
 
 .c3_b1_right{
 	border:1px solid #efefef;
-	height:492px;
-	width:273px;
-	margin:14px 0 0 925px;
+	height:620px;
+	width:240px;
+	margin:14px 0 0 985px;
 }
 .c3_b1_right h1{
 	font-size:14px;
@@ -505,7 +503,7 @@ span.pwd_icon{
 	list-style-image:url(../images/icons/icon_li_1_03.png);
 	list-style-position:inside;
 }
-/*绗簩琛�*/
+/*缁楊兛绨╃悰锟�*/
 .c3_b2{
 	
 }
@@ -542,7 +540,7 @@ span.pwd_icon{
 }
 
 
-/*绗笁琛屽竷灞�*/
+/*缁楊兛绗佺悰灞界鐏烇拷*/
 .c3_b3{
 	
 }
@@ -648,7 +646,7 @@ span.pwd_icon{
 	margin:8px 0;
 	padding:5px;
 	background-color:#f8f8f8;
-	-moz-border-radius: 15px;	/*css3灞炴�э紝鍦嗚妗�*/ 
+	-moz-border-radius: 15px;	/*css3鐏炵偞锟窖嶇礉閸﹀棜顫楀锟�*/ 
     -webkit-border-radius: 15px; 
     border-radius:15px;    	
 }
@@ -699,7 +697,7 @@ span.pwd_icon{
 
 
 
-/*棣栭〉鑴氶儴*/
+/*妫ｆ牠銆夐懘姘跺劥*/
 .f3_top{
 	border-bottom:2px solid #ed0042;
 	background-color:#eeeeee;
@@ -781,9 +779,9 @@ span.pwd_icon{
 .f3_bottom>img{
 	margin:10px auto 70px auto;	
 }
-/*棣栭〉缁撴潫*/
+/*妫ｆ牠銆夌紒鎾存将*/
 
-/**-----------鍒楄〃椤甸潰-----------**/
+/**-----------閸掓銆冩い鐢告桨-----------**/
 .c4_b1{
 	background:#f1f1f1 url(../images/c4_b1_bg_03.png) no-repeat;	
 	margin:10px 0;
@@ -1057,7 +1055,7 @@ span.pwd_icon{
 }
 
 
-/**-----------------鍐呭椤�-----------------**/
+/**-----------------閸愬懎顔愭い锟�-----------------**/
 .cn5_top{
 	background-color:#f2f0f0;	
 }
@@ -1293,7 +1291,7 @@ dd.price_enum{
 	margin:15px 18px 0 0;	
 }
 
-/*--鍐呭绗簩琛�--*/
+/*--閸愬懎顔愮粭顑跨癌鐞涳拷--*/
 .c5_b1{
 	width:1198px;
 	margin:12px auto;
@@ -1431,7 +1429,7 @@ dd.price_enum{
 	line-height:28px;
 	color:#2272c8;
 }
-/*鍐呭绗簩琛�*/
+/*閸愬懎顔愮粭顑跨癌鐞涳拷*/
 .c5_b2{
 	width:1200px;
 	margin:0 auto;
@@ -1513,7 +1511,7 @@ img.intro_pic{
 	width:975px;
 }
 
-/*璇勮*/
+/*鐠囧嫯顔�*/
 .c5_b2_tabscontent{
 	margin-top:10px;
 	margin-bottom:-1px;
@@ -1573,7 +1571,7 @@ img.intro_pic{
 	vertical-align:middle;
 }
 
-/*鏈�杩戞祻瑙�*/
+/*閺堬拷鏉╂垶绁荤憴锟�*/
 .c5_b2_right_title{
 	height:18px;
 	line-height:18px;
@@ -1594,7 +1592,7 @@ img.intro_pic{
 	margin:0 auto;
 }
 
-/**鍐呭宸︿晶鏍�*/
+/**閸愬懎顔愬锔挎櫠閺嶏拷*/
 .c5_b2_left{
 	width:208px;
 	margin-bottom:10px;
@@ -1623,7 +1621,7 @@ img.intro_pic{
 }
 
 .c5_b2_prolist{
-	margin-bottom:-1px;/*闅愯棌鏈�鍚庝竴涓笅杈规*/
+	margin-bottom:-1px;/*闂呮劘妫岄張锟介崥搴濈娑擃亙绗呮潏瑙勵攱*/
 }
 .c5_b2_prolist li{
 	width:168px;
@@ -1663,7 +1661,7 @@ img.intro_pic{
 }
 
 
-/**璁㈠崟椤甸潰*/
+/**鐠併垹宕熸い鐢告桨*/
 
 .buy_progress{
 	overflow:hidden;

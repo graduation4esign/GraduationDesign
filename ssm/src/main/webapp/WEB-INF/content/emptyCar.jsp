@@ -14,9 +14,9 @@
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index.jsp">退出</a>|</li>
-                <li><a href="confirm.jsp">我的订单<span class="jt_down"></span></a>|</li>
-                <li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+            	<li><a href="index">退出</a>|</li>
+                <li><a href="confirm">我的订单<span class="jt_down"></span></a>|</li>
+                <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
         </div>
@@ -31,7 +31,7 @@
     </div>
 	<!--中间部分-->
 	<div class="empty">
-	<a href="indexSuccess.jsp"><img src="images/empty_03.png" class="car"> </a>
+	<a href="indexSuccess"><img src="images/empty_03.png" class="car"> </a>
 	</div>
   <!--脚部-->
     <div class="footer3">
@@ -94,7 +94,7 @@
                 <a href="#">友情链接</a>|
                 <a href="#">供货商入驻</a> 
            	</p>
-            <p>沪ICP备14033591号-8 杰普软件briup.com版权所有 杰普软件科技有限公司 </p>
+            <p>江西理工大学南昌校区美妆网版权所有</p>
           	<img src="images/police.png">
         </div>
     </div>

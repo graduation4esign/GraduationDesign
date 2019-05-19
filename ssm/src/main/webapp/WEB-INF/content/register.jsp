@@ -4,32 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>briup电子商务-注册页</title>
+<title>美妆网-注册页</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<%
-   String s=(String)request.getAttribute("message");
-   if(s=="1"){
-%>
-<script type="text/javascript">
-	alert("注册成功");
-</script>
-	<%
-  		 }else if(s=="0"){ 
-	%>	
-	<script type="text/javascript">
-		alert("用户已注册");	
-	</script>
-	<%
-  		 }
-	%>
-	
+
 	<div class="container2">
     	<div class="header2">
         	<div>
-            	<a href="index.jsp"><img class="logo" src="images/logon_register.png"></a>
+            	<a href="index"><img class="logo" src="images/logon_register.png"></a>
             </div>
             <div>
             	<ul class="tabs">
@@ -37,7 +21,7 @@
                 </ul>
             </div>
             <div class="tlg">
-            	已有账号 <a href="tologin">登陆</a>
+            	已有账号 <a href="login">登陆</a>
             </div>
         </div>
         <div class="content2">

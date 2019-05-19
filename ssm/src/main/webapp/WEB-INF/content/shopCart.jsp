@@ -111,7 +111,7 @@ input{
 			var inputVal = input.val();
 			inputVal--;
 			if(Number(inputVal)<1){
-				alert("数量不能小于0,不然你干脆删掉.")
+				alert("数量不能小于0.")
 			}else{
 				input.val(inputVal);
 				var parentDiv = $(this).parent();
@@ -132,7 +132,7 @@ input{
 			var inputVal = input.val();
 			inputVal++;
 			if(Number(inputVal)<1){
-				alert("数量不能小于0,不然你干脆删掉.")
+				alert("数量不能小于0.")
 			}else{
 				input.val(inputVal);
 				var parentDiv = $(this).parent();
@@ -149,7 +149,7 @@ input{
 			var input = $(this);
 			var inputVal = input.val();
 			if(Number(inputVal)<1){
-				alert("数量不能小于0,不然你干脆删掉.")
+				alert("数量不能小于0.")
 			}else{
 				input.val(inputVal);
 				var parentDiv = $(this).parent().parent();
@@ -234,16 +234,16 @@ input{
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index.jsp">退出</a>|</li>
+            	<li><a href="index">退出</a>|</li>
                 <li><a href="#">我的订单<span class="jt_down"></span></a>|</li>
-                <li><a href="#">关注杰普<span class="jt_down"></span></a>|</li>
+                <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
         </div>
     </div>
     <!--头部-->
     <div class="header3">
-    	<a href="index.jsp"><img src="images/logo.png"  class="oneImg"></a>
+    	<a href="index"><img src="images/logo.png"  class="oneImg"></a>
     	
 
         <div class="h3_right">
@@ -365,7 +365,7 @@ input{
                 <a href="#">友情链接</a>|
                 <a href="#">供货商入驻</a> 
            	</p>
-            <p>沪ICP备14033591号-8 杰普软件briup.com版权所有 杰普软件科技有限公司 </p>
+            <p>江西理工大学南昌校区美妆网版权所有</p>
           	<img src="images/police.png">
         </div>
     </div>
