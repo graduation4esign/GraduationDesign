@@ -25,7 +25,7 @@
                     </h2>
                     <div class="si_box">
                     	<span class="usr_icon"></span>
-                        <input type="text" name="name"/>
+                        <input type="text" name="username"/>
                     </div>
                     <!--分割条-->
                     <div class="c10"></div>

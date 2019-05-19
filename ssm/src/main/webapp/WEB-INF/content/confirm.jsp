@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -65,35 +65,38 @@
 	<p class="orderButtom">填写并核对订单信息</p>
     <!--中间复杂部分-->
     <div class="content">
-    	<form action="toaddorder">
+    	<form action="toaddorder" action="toconfirm" method="post">
 	    	<div class="contentCenter">
-	   			
+	   			<input type="hidden" value="${sessionScope.orderid}" name="orderid">
+	   			<input type="hidden" value="${sessionScope.user.id}" name="userId">
 	    		<div class="centerTop">
 	    			<b style="font-size:20px;">收货人信息</b>
 	    			<p style="font-size:15px;">
-						收件人姓名：<input type="text" id='addName' name="name"><br/><br/>
-						收件人地址：<input type="text" id='addAdd'  name="address" ><br/><br/>
-						收件人电话：<input type="text" id='addPhone'  name="tel" >
+						收件人姓名：<input type="text" id='addName' name="receivename"><br/><br/>
+						收件人地址：<input type="text" id='addAdd'  name="receiveaddress" ><br/><br/>
+						收件人电话：<input type="text" id='addPhone'  name="receivephone" >
 					</p>
 					<p style="font-size:15px;"><button onclick="document.getElementById('divDialog').style.display=''">添加收件人</button></p>
 	    		</div>
 	    		 <!-- </form> -->
-	    		<p class="singleP"><b>送货清单</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>订单号:${orderId}</b>
+	    		<p class="singleP"><b>送货清单</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>订单号:${sessionScope.orderid}</b>
 	    		
 	    		<span>
-	    		<a href="todelorder?orderid=${orderId}">删除该订单</a> &nbsp;&nbsp;
+	    		<a href="todelorder?orderid=${sessionScope.orderid}">删除该订单</a> &nbsp;&nbsp;
 	    		<a href="toshopcart">返回购物车修改</a>
 	    		
 	    		</span></p>
 	    		<div class="bigDiv">
 	    			
 	    			<table border="1px solid red" >
-	    				<c:forEach items="${books}" var="book">
+	    				<c:forEach items="${sessionScope.sShopcartItems}" var="item">
 	    				<tr>
-	    					<td width="100px" ><img src="${book.product.img}" width="100px" height="100px"></td>
-	    					<td width="300px" align="center" >${book.product.name}</td>
-	    					<td width="600px" align="center" >￥${book.product.price}</td>
-	    					<td width="100px" align="center" >${book.num}</td>
+	    					<td width="100px" ><img src="${item.product.img}" width="100px" height="100px"></td>
+	    					<td width="300px" align="center" >${item.product.name}</td>
+	    					<td width="600px" align="center" >￥${item.product.price}</td>
+	    					<td width="100px" align="center" >${item.num}</td>
+	    					<input type="hidden" value="${item.product.id}" name="productId">
+	    					<input type="hidden" value="${item.product.price*item.num}" name="sum">
 	    					<td width="300px" align="center" >七天无理由退换货</td>
 	    				</tr>
 						</c:forEach>

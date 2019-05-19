@@ -1,5 +1,6 @@
 package com.yuman.service.Impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,24 @@ public class OrderServiceImpl implements IOrderService{
 	private SOrderMapper orderMapper;
 	
 	@Override
-	public List<SOrder> findAllOrder() {
+	public List<SOrder> findAllOrder(BigDecimal userId) {
 		SOrderExample example = new SOrderExample();
-		example.createCriteria();
+		example.createCriteria().andUserIdEqualTo(userId);
 		return orderMapper.selectByExample(example);
 	}
+
+	@Override
+	public void addOrder(SOrder order) {
+		orderMapper.insert(order);
+	}
+
+	@Override
+	public SOrder finOrderByOrderId(String orderId) {
+		SOrderExample example = new SOrderExample();
+		example.createCriteria().andOrderidEqualTo(orderId);
+		return orderMapper.selectByExample(example).get(0);
+	}
+
+	
 
 }

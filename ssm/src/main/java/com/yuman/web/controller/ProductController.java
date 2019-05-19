@@ -1,5 +1,6 @@
 package com.yuman.web.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -16,10 +17,11 @@ public class ProductController {
 	@Autowired
 	private IProductService productService;
 	
-	@RequestMapping(value = "/index")
-	public String hotProduct(HttpSession session) {
-		List<Product> products = productService.findHotProduct();
-		session.setAttribute("products", products);
-		return "/index";
+	@RequestMapping(value = "/toproductInfo")
+	public String hotProduct(int productId, HttpSession session) {
+		Product productInfo = productService.findProductById(new BigDecimal(productId));
+		System.out.println(productInfo.getId());
+		session.setAttribute("productInfo", productInfo);
+		return "/productInfo";
 	}
 }
