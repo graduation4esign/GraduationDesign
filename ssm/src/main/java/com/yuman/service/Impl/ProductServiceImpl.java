@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.yuman.bean.Product;
 import com.yuman.bean.ProductExample;
 import com.yuman.dao.ProductMapper;
-import com.yuman.service.IProductService;
+import com.yuman.service.interf.IProductService;
 
 @Service
 public class ProductServiceImpl implements IProductService{
@@ -44,6 +44,12 @@ public class ProductServiceImpl implements IProductService{
 	public void deleteProductById(BigDecimal id) {
 		productMapper.deleteByPrimaryKey(id);
 		
+	}
+	
+	@Override
+	public List<Product> findAllProduct(){
+		ProductExample example = new ProductExample();
+		return productMapper.selectByExample(example);
 	}
 
 }

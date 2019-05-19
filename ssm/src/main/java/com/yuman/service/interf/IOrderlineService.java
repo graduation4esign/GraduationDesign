@@ -1,4 +1,4 @@
-package com.yuman.service;
+package com.yuman.service.interf;
 
 import java.math.BigDecimal;
 import java.util.List;

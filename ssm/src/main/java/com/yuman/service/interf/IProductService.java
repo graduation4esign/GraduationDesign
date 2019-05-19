@@ -1,4 +1,4 @@
-package com.yuman.service;
+package com.yuman.service.interf;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -11,4 +11,6 @@ public interface IProductService {
 	Product findProductById(BigDecimal id);
 	
 	void deleteProductById(BigDecimal id);
+
+	List<Product> findAllProduct();
 }

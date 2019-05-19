@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yuman.bean.SShopcartItem;
-import com.yuman.service.IShopcartService;
+import com.yuman.service.interf.IShopcartService;
 
 @Controller
 public class ShopCartController {

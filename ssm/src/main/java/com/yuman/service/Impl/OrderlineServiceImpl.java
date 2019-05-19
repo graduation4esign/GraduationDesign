@@ -11,7 +11,7 @@ import com.yuman.bean.OrderlineExample;
 import com.yuman.dao.OrderlineMapper;
 import com.yuman.dao.ProductMapper;
 import com.yuman.dao.SOrderMapper;
-import com.yuman.service.IOrderlineService;
+import com.yuman.service.interf.IOrderlineService;
 
 @Service
 public class OrderlineServiceImpl implements IOrderlineService{

@@ -11,7 +11,7 @@ import com.yuman.bean.SShopcartItem;
 import com.yuman.bean.SShopcartItemExample;
 import com.yuman.dao.ProductMapper;
 import com.yuman.dao.SShopcartItemMapper;
-import com.yuman.service.IShopcartService;
+import com.yuman.service.interf.IShopcartService;
 
 @Service
 public class ShopcartServiceImpl implements IShopcartService{

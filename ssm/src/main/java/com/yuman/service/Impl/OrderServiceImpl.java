@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.yuman.bean.SOrder;
 import com.yuman.bean.SOrderExample;
 import com.yuman.dao.SOrderMapper;
-import com.yuman.service.IOrderService;
+import com.yuman.service.interf.IOrderService;
 
 @Service
 public class OrderServiceImpl implements IOrderService{

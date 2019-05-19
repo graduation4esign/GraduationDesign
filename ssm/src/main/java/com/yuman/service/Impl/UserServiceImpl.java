@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.yuman.bean.SUser;
 import com.yuman.bean.SUserExample;
 import com.yuman.dao.SUserMapper;
-import com.yuman.service.IUserService;
+import com.yuman.service.interf.IUserService;
 
 @Service
 public class UserServiceImpl implements IUserService{

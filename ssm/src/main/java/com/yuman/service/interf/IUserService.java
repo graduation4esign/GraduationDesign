@@ -1,4 +1,4 @@
-package com.yuman.service;
+package com.yuman.service.interf;
 
 import com.yuman.bean.SUser;
 

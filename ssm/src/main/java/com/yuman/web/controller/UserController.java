@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yuman.bean.Product;
 import com.yuman.bean.SUser;
-import com.yuman.service.IProductService;
-import com.yuman.service.IUserService;
+import com.yuman.service.interf.IProductService;
+import com.yuman.service.interf.IUserService;
 
 @Controller
 public class UserController {

@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.yuman.bean.Orderline;
 import com.yuman.bean.Product;
 import com.yuman.bean.SOrder;
-import com.yuman.service.IOrderService;
-import com.yuman.service.IOrderlineService;
-import com.yuman.service.IProductService;
-import com.yuman.service.IShopcartService;
+import com.yuman.service.interf.IOrderService;
+import com.yuman.service.interf.IOrderlineService;
+import com.yuman.service.interf.IProductService;
+import com.yuman.service.interf.IShopcartService;
 
 @Controller
 public class OrderController {

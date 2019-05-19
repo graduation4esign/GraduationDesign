@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yuman.bean.Product;
-import com.yuman.service.IProductService;
+import com.yuman.service.interf.IProductService;
 
 @Controller
 public class ProductController {

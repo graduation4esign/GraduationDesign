@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>确认订单页面</title>
-</head>
-<body>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>提交订单页面</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/icons.css" />
 <link rel="stylesheet" href="css/table.css" />
@@ -71,13 +70,12 @@
 	   			<input type="hidden" value="${sessionScope.orderid}" name="orderid">
 	   			<input type="hidden" value="${sessionScope.user.id}" name="userId">
 	    		<div class="centerTop">
-	    			<b style="font-size:20px;">收货地址信息</b>
-	    			
-					  	<p style="font-size:15px;">
+	    			<b style="font-size:20px;">选择收货地址信息</b>
+	    			<!--  <p style="font-size:15px;">
 						收件人姓名：<input type="text" id='addName' name="receivename"><br/><br/>
 						收件人地址：<input type="text" id='addAdd'  name="receiveaddress" ><br/><br/>
 						收件人电话：<input type="text" id='addPhone'  name="receivephone" >
-						</p>
+					</p>-->
 					<p style="font-size:15px;"><button onclick="document.getElementById('divDialog').style.display=''">添加收件人</button></p>
 	    		</div>
 	    		 <!-- </form> -->
@@ -216,6 +214,7 @@
         </div>
     </div>
 
+	
 
 </body>
 </html>

@@ -8,13 +8,14 @@
 	margin:12px 0;
 }
 .content1{
-	background-color:#CDBDBE;	
+	background-color:#DBC6C1;	
 }
 .content1 .c1_box1{
 	width:1020px;
 	height:602px;
 	margin:0 auto;
-	background:url(../images/bg_login.png) no-repeat center;
+	background:url(../images/bg_login.jpg)no-repeat center;	
+	background-size: cover;
 	position:relative;/*閻╃顕�规矮缍�*/
 }
 /*閻у妾板锟�*/
@@ -23,11 +24,12 @@
 	background-color:#FFF;
 	position:absolute;/*缂佹繂顕�规矮缍�*/
 	top:110px;
-	right:0px;
+	right:300px;
 }
 .login_box .center1{
 	width:345px;
 	margin:20px 20px;	
+	align:center;
 }
 .login_box h1{
 	font-size:18px;
