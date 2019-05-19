@@ -8,5 +8,5 @@ import com.yuman.bean.Orderline;
 public interface IOrderlineService {
 	void addOrderline(Orderline orderline);
 	
-	List<Orderline> findOrderlineByOrderId(BigDecimal id);
+	List<Orderline> findOrderlineByUserId(BigDecimal id);
 }

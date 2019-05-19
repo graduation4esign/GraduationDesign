@@ -1,7 +1,6 @@
 package com.yuman.web.controller;
 
 import java.math.BigDecimal;
-import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -59,6 +58,7 @@ public class OrderController {
 		orderline.setNum(product.getRemain());
 		orderline.setOrderId(findOrder.getId());
 		orderline.setProductId(new BigDecimal(productId));
+		orderline.setUserId(findOrder.getUserId());
 		orderlineService.addOrderline(orderline);
 		
 		return "/confirm";
@@ -66,9 +66,8 @@ public class OrderController {
 	
 	@RequestMapping(value = "/comfirmList")
 	public String comfirmList(int userId, HttpSession session) {
-		List<SOrder> orders = orderService.findAllOrder(new BigDecimal(userId));
-		
-		session.setAttribute("orders", orders);
+		List<Orderline> orderlines = orderlineService.findOrderlineByUserId(new BigDecimal(userId));
+		session.setAttribute("orderlines", orderlines);
 		return "/comfirmList";
 	}
 }
