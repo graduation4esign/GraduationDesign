@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>个人信息修改</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>收货地址信息修改</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/icons.css" />
@@ -12,17 +12,6 @@
 <link rel="stylesheet" href="css/newmain.css" />
 </head>
 <body>
-	<%
-		String s=(String)request.getAttribute("message");
-		if(s!=null){
-	%>
-	<script type="text/javascript">
-		alert("用户信息修改失败");
-	</script>
-	<%
-		}
-	%>
-	
 	<!--顶部-->
 	<div class="top">
     	<div class="top_center">
@@ -86,14 +75,7 @@
     					<ul class="list">
     						<li>
     								<input id="J_euserName" class="long" readonly="readonly" name="username" value="${username}" type="text" />
-    								<div class="name">用户名:</div>
-    								<span id="J_eUserNameTipImg" class="icon"></span>
-    								<div id="J_eUserNameTipInfo" class="ltip"></div>
-    								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
-    						</li>
-    						<li>
-    								<input id="J_euserName" class="long" name="password" value="" type="text" />
-    								<div class="name">密码:</div>
+    								<div class="name">收件人姓名:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
@@ -107,21 +89,14 @@
     						</li>
     						<li>
     								<input id="J_euserName" class="long" name="address" value="" type="text" />
-    								<div class="name">地址:</div>
+    								<div class="name">收件人地址:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
     						</li>
     						<li>
     								<input id="J_euserName" class="long" name="phone" value="" type="text" />
-    								<div class="name">电话:</div>
-    								<span id="J_eUserNameTipImg" class="icon"></span>
-    								<div id="J_eUserNameTipInfo" class="ltip"></div>
-    								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
-    						</li>
-    						<li>
-    								<input id="J_euserName" class="long" name="email" value="" type="text" />
-    								<div class="name">电子邮箱:</div>
+    								<div class="name">收件人电话:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>

@@ -40,7 +40,13 @@
 		</div>
 		<div class="h3_right">
 			<div class="myyy">
-				<a href="userinfo.jsp">个人信息</a> <span class="sj_down"></span>
+				<a href="userinfo">个人信息</a> <span class="sj_down"></span>
+				<form>
+					<select name="info">
+						<a href="userinfo"><option value="person">个人信息</option></a>
+						<a href="receiveAddress"><option value="receive">收货地址信息</option></a>
+					</select>
+				</form>
 			</div>
 			<div class="tsc">
 				<a href="shopCart">去购物车结算</a> <span class="sj_right"></span>
