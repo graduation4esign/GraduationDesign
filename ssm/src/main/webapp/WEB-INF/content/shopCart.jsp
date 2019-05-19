@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -119,7 +119,7 @@ input{
 				
 				var oneprice = parentDiv.siblings()[0];//获取到单价div
 				var onePricevalue = oneprice.innerHTML;
-				var onePricevalue = Number(onePricevalue.substring(1,onePricevalue.length-1));
+				var onePricevalue = Number(onePricevalue.substring(1,onePricevalue.length));
 				var allsum = Number(input.val())*onePricevalue;
 				allprice.html("￥"+allsum+"元");
 				
@@ -139,7 +139,7 @@ input{
 				var allprice = parentDiv.next("div");//获取到小记价格的div
 				var oneprice = parentDiv.siblings()[0];//获取到单价div
 				var onePricevalue = oneprice.innerHTML;
-				var onePricevalue = Number(onePricevalue.substring(1,onePricevalue.length-1));
+				var onePricevalue = Number(onePricevalue.substring(1,onePricevalue.length));
 				var allsum = Number(input.val())*onePricevalue;
 				allprice.html("￥"+allsum+"元");
 			}
@@ -156,7 +156,7 @@ input{
 				var allprice = parentDiv.next("div");//获取到小记价格的div
 				var oneprice = parentDiv.siblings()[0];//获取到单价div
 				var onePricevalue = oneprice.innerHTML;
-				var onePricevalue = Number(onePricevalue.substring(1,onePricevalue.length-1));
+				var onePricevalue = Number(onePricevalue.substring(1,onePricevalue.length));
 				var allsum = Number(input.val())*onePricevalue;
 				allprice.html("￥"+allsum+"元");
 			}
@@ -176,7 +176,7 @@ input{
 					$.each(price,function(index,obj){
 						cou++;
 						var divprice = $(obj).html();
-						sumCount += Number(divprice.substring(1,divprice.length-1));
+						sumCount += Number(divprice.substring(1,divprice.length));
 					});
 					$("#allnum").html(cou);
 					$("#allpri").html(sumCount)
@@ -194,14 +194,14 @@ input{
 			var $allpri = $("#allpri");
 			if(checked){//勾选 
 				var priceVal = $(this).parent().parent().next("div").find(".price");
-				var priceValue  = Number(priceVal.html().substring(1,priceVal.html().length-1));
+				var priceValue  = Number(priceVal.html().substring(1,priceVal.html().length));
 				var num = Number($allpri.html())+priceValue;
 				$allpri.html(num);
 				var co = Number($allnum.html());
 				$allnum.html(++co);
 			}else{//取消 
 				var priceVal = $(this).parent().parent().next("div").find(".price");
-				var priceValue  = Number(priceVal.html().substring(1,priceVal.html().length-1));
+				var priceValue  = Number(priceVal.html().substring(1,priceVal.html().length));
 				var num = Number($allpri.html())-priceValue;
 				$allpri.html(num);
 				var co = Number($allnum.html());
@@ -269,25 +269,25 @@ input{
 		</div>
 	</div>
 	<div class="c_book">
-	<c:forEach items="${shopCart}" var="book">
+	<c:forEach items="${sessionScope.sShopcartItems}" var="item">
 		<div class="row">
 			<div style="float: left" class="line">
-				<div style="margin-top: 30px" ><input type="checkbox" name="bookId" value="${book.product.id}"></div>
+				<div style="margin-top: 30px" ><input type="checkbox" name="bookId" value="${item.product.id}"></div>
 				<div style="margin-left: 80px;">
-					<img src="${book.product.img}" style="float: left;width:85px;height:85px">
-					<span>${book.product.name}</span>
+					<img src="${item.product.img}" style="float: left;width:85px;height:85px">
+					<span>${item.product.name}</span>
 				</div>
 			</div>
 			<div style="float: right" class="row_right">
-				<div style="margin-right: 10px">￥${book.product.price}</div><!-- 单价 -->
+				<div style="margin-right: 10px">￥${item.product.price}</div><!-- 单价 -->
 				<div>
 					<span class="jian">-</span>
-					<span><input type="text" name="bookNum" class="val" value="${book.num}" style="text-align: center" ></span>
+					<span><input type="text" name="bookNum" class="val" value="${item.num}" style="text-align: center" ></span>
 					<span class="sum">+</span>
 				</div>
-				<div class="price">￥${book.product.price*book.num}</div><!-- 小结 -->
+				<div class="price">￥${item.product.price*item.num}</div><!-- 小结 -->
 				<div>
-					<a href="todeleteshopcart?id=${book.id}">删除</a>
+					<a href="todeleteshopcart?id=${product.id}">删除</a>
 				</div>
 			</div>
 		</div>	

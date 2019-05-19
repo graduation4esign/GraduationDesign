@@ -1,5 +1,6 @@
 package com.yuman.service.Impl;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -34,6 +35,15 @@ public class ProductServiceImpl implements IProductService{
 			i++;
 		}
 		return list;
+	}
+	@Override
+	public Product findProductById(BigDecimal id) {
+		return productMapper.selectByPrimaryKey(id);
+	}
+	@Override
+	public void deleteProductById(BigDecimal id) {
+		productMapper.deleteByPrimaryKey(id);
+		
 	}
 
 }

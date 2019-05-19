@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -126,60 +127,15 @@ input{
     </div>
     
 <!--中间部分div-->
+
+<c:forEach items="${sessionScope.orders}" var="order">
 <div class="empty">
 	<div class="c_header">
 		<div class="leftt">
-			<span style="margin-left: 70px">${orderId}</span>
+			<span style="margin-left: 70px">订单号:${order.orderid}</span>
 		</div>
 		<div class="rightt">
-			<span><a href="confirm"><button>去支付</button></a></span>
-			<span><a href="todelorder"><button>删除订单</button></a></span>
-			<span>数量</span>
-			<span  style="margin-right: 0px">总价</span>
-		</div>
-	</div>
-	<div class="c_book">
-		<div class="row">
-			<div style="float: left">
-				<div style="margin-left: 80px;">
-					<img src="images/1.png" style="float: left">
-					<span>Effective JAVA</span>
-				</div>
-			</div>
-			<div style="float: right" class="row_right">
-				<div style="margin-right: 10px">5</div>
-				<div>
-					100
-				</div>
-				
-			</div>
-		</div>
-		<div class="row">
-			<div style="float: left">
-				<div style="margin-left: 80px;">
-					<img src="images/1.png" style="float: left">
-					<span>Effective JAVA</span>
-				</div>
-			</div>
-			<div style="float: right" class="row_right">
-				<div style="margin-right: 10px">5</div>
-				<div>
-					100
-				</div>
-				
-			</div>
-		</div>
-		
-	</div>
-	
-</div>
-<div class="empty">
-	<div class="c_header">
-		<div class="leftt">
-			<span style="margin-left: 70px">订单号:342227937</span>
-		</div>
-		<div class="rightt">
-			<span>已支付</span>
+			<span>${order.paystatus}</span>
 			<span><a href="#"><button>删除订单</button></a></span>
 			<span>数量</span>
 			<span  style="margin-right: 0px">总价</span>
@@ -220,6 +176,7 @@ input{
 	</div>
 	
 </div>
+</c:forEach>
 
      <!--脚部-->
     <div class="footer3">

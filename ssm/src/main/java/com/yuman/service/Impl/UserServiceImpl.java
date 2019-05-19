@@ -16,15 +16,15 @@ public class UserServiceImpl implements IUserService{
 	private SUserMapper userMapper;
 	
 	@Override
-	public boolean login(SUser user) {
+	public SUser login(SUser user) {
 		SUserExample example = new SUserExample();
-		example.createCriteria().andUsernameEqualTo(user.getUsername()).andPasswordEqualTo(user.getPassword());
+		example.createCriteria().andIdIsNotNull().andUsernameEqualTo(user.getUsername()).andPasswordEqualTo(user.getPassword());
 		List<SUser> users = userMapper.selectByExample(example);
 		SUser returnUser = users.get(0);
 		if (returnUser != null) {
-			return true;
+			return returnUser;
 		}
-		return false;
+		return null;
 	}
 
 	@Override
