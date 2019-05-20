@@ -66,20 +66,10 @@
 	<p class="orderButtom">选择并核对订单信息</p>
 	<!--中间复杂部分-->
 	<div class="content">
-		<form action="toaddorder" action="toconfirm" method="post">
+		<form action="toaddorder" method="post">
 			<div class="contentCenter">
 				<input type="hidden" value="${sessionScope.orderid}" name="orderid">
 				<input type="hidden" value="${sessionScope.user.id}" name="userId">
-				<div class="centerTop">
-						<b style="font-size: 20px;">收货地址信息</b>
-
-						<p style="font-size: 15px;">
-							收件人姓名：<input type="text" id='addName' name="rName" value="${sessionScope.address.rName}"><br />
-							<br /> 收件人地址：<input type="text" id='addAdd' name="rAddress" value="${sessionScope.address.rAddress}"><br />
-							<br /> 收件人电话：<input type="text" id='addPhone' name="rPhone" value="${sessionScope.address.rPhone}">
-						</p>
-					
-				</div>
 				<!-- </form> -->
 				<p class="singleP">
 					<b>送货清单</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>订单号:${sessionScope.orderid}</b>

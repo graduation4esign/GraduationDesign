@@ -16,6 +16,7 @@ import com.yuman.bean.Orderline;
 import com.yuman.bean.Product;
 import com.yuman.bean.SAddress;
 import com.yuman.bean.SOrder;
+import com.yuman.service.interf.IAddressService;
 import com.yuman.service.interf.IOrderService;
 import com.yuman.service.interf.IOrderlineService;
 import com.yuman.service.interf.IProductService;
@@ -34,6 +35,9 @@ public class OrderController {
 	
 	@Autowired
 	private IProductService productService;
+	
+	@Autowired
+	private IAddressService addressService;
 	
 	@RequestMapping(value = "/toconfirm")
 	public String order(HttpSession session) {
@@ -62,7 +66,15 @@ public class OrderController {
 		orderline.setUserId(findOrder.getUserId());
 		orderlineService.addOrderline(orderline);
 		
-		return "/confirm";
+		return "/submitOrder";
+	}
+	
+	@RequestMapping(value = "/confirmSuccess", method = RequestMethod.POST)
+	public String confirmSuccess(SAddress address, int userId) {
+		address.setUserId(new BigDecimal(userId));
+		System.out.println(address);
+		addressService.addAddress(address);
+		return "/confirmSuccess";
 	}
 	
 	@RequestMapping(value = "/comfirmList")

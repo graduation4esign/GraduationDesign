@@ -1,11 +1,15 @@
 package com.yuman.web.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +18,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yuman.bean.Product;
+import com.yuman.bean.SAddress;
 import com.yuman.bean.SCate;
 import com.yuman.bean.SCateDetail;
 import com.yuman.bean.SUser;
+import com.yuman.service.Impl.AddressServiceImpl;
 import com.yuman.service.Impl.CategoryServiceImpl;
 import com.yuman.service.Impl.ProductServiceImpl;
+import com.yuman.service.interf.IAddressService;
 import com.yuman.service.interf.ICategoryService;
 import com.yuman.service.interf.IProductService;
 import com.yuman.service.interf.IUserService;
@@ -33,6 +40,9 @@ public class UserController {
 
 	@Autowired
 	private ICategoryService categoryService;
+	
+	@Autowired
+	private IAddressService addressService;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage() {
@@ -85,6 +95,11 @@ public class UserController {
 		application.setAttribute("hotProducts", hotProducts);
 		return "/indexSuccess";
 	}
+	
+	@RequestMapping(value = "/indexSuccess")
+	public String returnIndex() {
+		return "/indexSuccess";
+	}
 
 	@RequestMapping(value = "/userinfo", method = RequestMethod.GET)
 	public String userInfo() {
@@ -92,16 +107,43 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/userinfo", method = RequestMethod.POST)
-	public String userInfoUpdate(SUser user) {
+	public String userInfoUpdate(SUser user, HttpServletResponse response) {
 
 		userService.updateUserInfoById(user);
 		System.out.println(user);
-		return "/userinfo";
+		PrintWriter pw = null;
+		try {
+			pw = response.getWriter();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		pw.print("<script>alert('update sucessful')</script>");
+		pw.flush();
+		return "/indexSuccess";
 	}
 	
 	@RequestMapping(value = "/receiveAddress", method = RequestMethod.GET)
-	public String receiveAddress() {
+	public String receiveAddress(int userId, HttpSession session) {
+		SAddress address = addressService.findAddress(new BigDecimal(userId));
+		session.setAttribute("address", address);
 		return "/receiveAddress";
+	}
+	
+	@RequestMapping(value = "/receiveAddress", method = RequestMethod.POST)
+	public String receiveAddress(SAddress address, HttpServletResponse response) {
+		System.out.println(address);
+		addressService.updateAddress(address);
+		PrintWriter pw = null;
+		try {
+			pw = response.getWriter();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		pw.print("<script>alert('update sucessful')</script>");
+		pw.flush();
+		return "/indexSuccess";
 	}
 	
 }

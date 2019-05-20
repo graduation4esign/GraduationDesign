@@ -29,7 +29,7 @@
 
 			</ul>
 			<ul class="top_bars">
-				<li><a href="/">退出</a>|</li>
+				<li><a href="http://localhost:8080/ssm">退出</a>|</li>
 				<li><a href="comfirmList?userId=${sessionScope.user.id}">我的订单<span
 						class="jt_down"></span></a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
@@ -49,7 +49,7 @@
 		<div class="h3_right">
 			<div class="myyy">
 				<a href="userinfo">个人信息</a> <span class="sj_down"></span>
-				<a href="receiveAddress">收货地址信息</a> <span class="sj_down"></span>
+				<a href="receiveAddress?userId=${sessionScope.user.id}">收货地址信息</a> <span class="sj_down"></span>
 			</div>
 			<div class="tsc">
 				<a href="toshopCart?userId=${sessionScope.user.id}">去购物车结算</a> <span
@@ -108,7 +108,7 @@
 				</h1>
 				<ul>
 					<c:forEach items="${hotProducts}" var="hotProduct">
-						<li><a href="#">〈热〉${hotProduct.name}</a></li>
+						<li><a href="toproductInfo?productId=${hotProduct.id}">〈热〉${hotProduct.name}</a></li>
 					</c:forEach>
 				</ul>
 			</div>

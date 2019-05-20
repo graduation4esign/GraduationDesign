@@ -75,7 +75,7 @@ function addShopCart(bookname){
 	</div>
 	<!--头部-->
 	<div class="header3">
-		<a href="index.jsp"><img src="images/logo.png"></a>
+		<a href="indexSuccess"><img src="images/logo.png"></a>
 		<div class="h3_center">
 			<div class="search_box">
 				<input type="text" /> <span>搜索</span>

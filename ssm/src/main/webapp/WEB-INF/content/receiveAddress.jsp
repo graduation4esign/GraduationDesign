@@ -74,29 +74,31 @@
     			<div class="security">
     				<form action="receiveAddress" method="post">
     					<ul class="list">
+    						<input type="hidden" name="id" value="${sessionScope.address.id}"/>
+    						<input type="hidden" name="userId" value="${sessionScope.user.id}"/>
     						<li>
-    								<input id="J_euserName" class="long" readonly="readonly" name="rName" value="" type="text" />
+    								<input id="J_euserName" class="long" readonly="readonly" name="rName" value="${sessionScope.address.rName}" type="text" />
     								<div class="name">收件人姓名:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
     						</li>
     						<li>
-    								<input id="J_euserName" class="long" name="zip" value="" type="text" />
+    								<input id="J_euserName" class="long" name="zip" value="${sessionScope.address.zip}" type="text" />
     								<div class="name">邮编:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
     						</li>
     						<li>
-    								<input id="J_euserName" class="long" name="rAddress" value="" type="text" />
+    								<input id="J_euserName" class="long" name="rAddress" value="${sessionScope.address.rAddress}" type="text" />
     								<div class="name">收件人地址:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
     						</li>
     						<li>
-    								<input id="J_euserName" class="long" name="rPhone" value="" type="text" />
+    								<input id="J_euserName" class="long" name="rPhone" value="${sessionScope.address.rPhone}" type="text" />
     								<div class="name">收件人电话:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
