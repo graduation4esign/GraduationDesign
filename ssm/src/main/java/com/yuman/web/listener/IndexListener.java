@@ -15,6 +15,7 @@ import com.yuman.bean.SCateDetail;
 import com.yuman.service.Impl.CategoryServiceImpl;
 import com.yuman.service.Impl.ProductServiceImpl;
 
+@Deprecated
 public class IndexListener implements ServletContextListener,HttpSessionListener{
 
 	@Override
@@ -39,11 +40,11 @@ public class IndexListener implements ServletContextListener,HttpSessionListener
 	public void contextInitialized(ServletContextEvent arg0) {
 		CategoryServiceImpl categoryServiceImpl = new CategoryServiceImpl();
 		ProductServiceImpl productServiceImpl = new ProductServiceImpl();
-		//»ñÈ¡Ò»¼¶²Ëµ¥ºÍÒ»¼¶²Ëµ¥ÏÂ¶ÔÓ¦µÄ¶þ¼¶²Ëµ¥
+		//ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½Â¶ï¿½Ó¦ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Ëµï¿½
 		Map<SCate, List<SCateDetail>> categorys = categoryServiceImpl.listCategoryDetail();
-		//»ñÈ¡ËùÓÐÉÌÆ·
+		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
 		List<Product> products = productServiceImpl.findAllProduct();
-		//°ÑËüÃÇ¶¼´æ·Åµ½applicationÖÐ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½Åµï¿½applicationï¿½ï¿½
 		ServletContext application = arg0.getServletContext();
 		application.setAttribute("categorys", categorys);
 		application.setAttribute("products", products);

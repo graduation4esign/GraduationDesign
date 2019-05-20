@@ -16,11 +16,22 @@
 	<div class="top">
 		<div class="top_center">
 			<ul class="top_lr">
-				<li><a>欢迎 ${sessionScope.user.username}</a></li>
+				<c:choose>
+					<c:when test="${sessionScope.isSuccess==false}">
+						<li><a href="login" style="color: purple;">亲,请登入</a></li>
+					</c:when>
+					<c:when test="${sessionScope.isSuccess==true}">
+						<li><a>欢迎 ${sessionScope.user.username}</a></li>
+					</c:when>
+
+				</c:choose>
+
+
 			</ul>
 			<ul class="top_bars">
-				<li><a href="index.jsp">退出</a>|</li>
-				<li><a href="comfirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
+				<li><a href="/">退出</a>|</li>
+				<li><a href="comfirmList?userId=${sessionScope.user.id}">我的订单<span
+						class="jt_down"></span></a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
 			</ul>
@@ -46,7 +57,8 @@
 				</form>
 			</div>
 			<div class="tsc">
-				<a href="shopCart?userId=${sessionScope.user.id}">去购物车结算</a> <span class="sj_right"></span>
+				<a href="shopCart?userId=${sessionScope.user.id}">去购物车结算</a> <span
+					class="sj_right"></span>
 			</div>
 		</div>
 	</div>
@@ -67,7 +79,7 @@
 			<div class="c3_b1_left">
 				<dl>
 
-					<c:forEach items="${details}" var="c">
+					<c:forEach items="${categorys}" var="c">
 						<dd>
 							<h1>
 								<a href="toviewbook?cateId=${c.key.id}">${c.key.name}</a>
@@ -100,7 +112,7 @@
 					热卖商品<a href="#">更多</a>
 				</h1>
 				<ul>
-					<li><a href="#">〈热〉新款持妆粉底  </a></li>
+					<li><a href="#">〈热〉新款持妆粉底 </a></li>
 					<li><a href="#">〈热〉Chanel新款丝绒口红</a></li>
 					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
 					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>

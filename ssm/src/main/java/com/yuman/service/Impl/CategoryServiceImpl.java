@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.yuman.bean.SCate;
 import com.yuman.bean.SCateDetail;
@@ -14,6 +15,7 @@ import com.yuman.dao.SCateDetailMapper;
 import com.yuman.dao.SCateMapper;
 import com.yuman.service.interf.ICategoryService;
 
+@Service
 public class CategoryServiceImpl implements ICategoryService{
 
 	@Autowired
@@ -25,6 +27,7 @@ public class CategoryServiceImpl implements ICategoryService{
 	@Override
 	public List<SCate> findAllCate() {
 		SCateExample example = new SCateExample();
+		example.createCriteria();
 		return sCateMapper.selectByExample(example);
 	}
 
