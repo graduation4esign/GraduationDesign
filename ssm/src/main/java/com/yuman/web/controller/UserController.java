@@ -27,40 +27,41 @@ import com.yuman.service.interf.IUserService;
 public class UserController {
 	@Autowired
 	private IUserService userService;
-	
+
 	@Autowired
 	private IProductService productService;
-	
+
 	@Autowired
 	private ICategoryService categoryService;
-	
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage() {
 		return "/login";
 	}
-	
+
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(SUser user, HttpSession session) {
 		SUser findUser = userService.login(user);
 		if ( findUser != null) {
+			System.out.println(user.getDob()+"date");
 			session.setAttribute("user", findUser);
 			System.out.println("userId:"+findUser.getId());
-			List<Product> products = productService.findHotProduct();
+			List<Product> products = productService.findRecommendProduct();
 			System.out.println(products.get(0).getName());
 			session.setAttribute("isSuccess", true);
 			session.setAttribute("products", products);
-			
-			
+
+
 			return "/indexSuccess";
 		}
 		return "/login";
 	}
-	
+
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String registerPage() {
 		return "/register";
 	}
-	
+
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String register(SUser user, HttpSession session) {
 		user.setDob(new Date());
@@ -71,14 +72,36 @@ public class UserController {
 		}
 		return "/register";
 	}
-	
+
 	@RequestMapping(value = "/")
 	public String index(HttpSession session, HttpServletRequest request) {
 		session.setAttribute("isSuccess", false);
 		session.setAttribute("user", null);
+		session.setAttribute("products", null);
 		Map<SCate, List<SCateDetail>> categorys = categoryService.listCategoryDetail();
+		List<Product> hotProducts = productService.findAllProduct();
 		ServletContext application = request.getSession().getServletContext();
 		application.setAttribute("categorys", categorys);
+		application.setAttribute("hotProducts", hotProducts);
 		return "/indexSuccess";
 	}
+
+	@RequestMapping(value = "/userinfo", method = RequestMethod.GET)
+	public String userInfo() {
+		return "/userinfo";
+	}
+
+	@RequestMapping(value = "/userinfo", method = RequestMethod.POST)
+	public String userInfoUpdate(SUser user) {
+
+		userService.updateUserInfoById(user);
+		System.out.println(user);
+		return "/userinfo";
+	}
+	
+	@RequestMapping(value = "/receiveAddress", method = RequestMethod.GET)
+	public String receiveAddress() {
+		return "/receiveAddress";
+	}
+	
 }

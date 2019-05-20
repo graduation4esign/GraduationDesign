@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yuman.bean.Orderline;
 import com.yuman.bean.Product;
+import com.yuman.bean.SAddress;
 import com.yuman.bean.SOrder;
 import com.yuman.service.interf.IOrderService;
 import com.yuman.service.interf.IOrderlineService;
@@ -44,7 +45,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value = "/toaddorder", method = RequestMethod.POST)
-	public String orderInfo(SOrder order,int productId) {
+	public String orderInfo(SOrder order, int productId) {
 		System.out.println("productId:"+productId);
 		order.setPaystatus(new BigDecimal(0));
 		order.setDob(new Date());

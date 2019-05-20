@@ -6,7 +6,7 @@ import java.util.List;
 import com.yuman.bean.Product;
 
 public interface IProductService {
-	List<Product> findHotProduct();
+	List<Product> findRecommendProduct();
 	
 	Product findProductById(BigDecimal id);
 	

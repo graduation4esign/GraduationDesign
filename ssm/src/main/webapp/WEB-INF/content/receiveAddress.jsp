@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -68,13 +69,13 @@
     <div class="container4">
     	<div class="register_box">
     			<div class="head">
-    				<h3>个人信息</h3>
+    				<h3>修改收货地址</h3>
     			</div>
     			<div class="security">
-    				<form action="userinfo">
+    				<form action="receiveAddress" method="post">
     					<ul class="list">
     						<li>
-    								<input id="J_euserName" class="long" readonly="readonly" name="username" value="${username}" type="text" />
+    								<input id="J_euserName" class="long" readonly="readonly" name="rName" value="" type="text" />
     								<div class="name">收件人姓名:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
@@ -88,14 +89,14 @@
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
     						</li>
     						<li>
-    								<input id="J_euserName" class="long" name="address" value="" type="text" />
+    								<input id="J_euserName" class="long" name="rAddress" value="" type="text" />
     								<div class="name">收件人地址:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>
     								<span class="placeholder" style="position: absolute;z-index: 20;color: rgb(153,153,153);top: 14px;left: 345px;line-height: 37px;"></span>
     						</li>
     						<li>
-    								<input id="J_euserName" class="long" name="phone" value="" type="text" />
+    								<input id="J_euserName" class="long" name="rPhone" value="" type="text" />
     								<div class="name">收件人电话:</div>
     								<span id="J_eUserNameTipImg" class="icon"></span>
     								<div id="J_eUserNameTipInfo" class="ltip"></div>

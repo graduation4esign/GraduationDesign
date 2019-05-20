@@ -18,7 +18,7 @@ public class ShopCartController {
 	@Autowired
 	private IShopcartService shopcartService;
 	
-	@RequestMapping(value="/shopCart")
+	@RequestMapping(value="/toshopCart")
 	public String shopCart(int userId, HttpSession session) {
 		System.out.println("shopCart userId:"+userId);
 		List<SShopcartItem> sShopcartItems = shopcartService.findAllShopcartItem(new BigDecimal(userId));
@@ -28,9 +28,12 @@ public class ShopCartController {
 	}
 	
 	@RequestMapping(value="/toaddshopcar", method = RequestMethod.POST)
-	public String toaddShopCar(SShopcartItem item) {
+	public String toaddShopCar(SShopcartItem item, HttpSession session) {
 		System.out.println(item.getNum() + " "+ item.getProductId()+" "+item.getUserId());
 		shopcartService.addItem(item);
+		
+		List<SShopcartItem> sShopcartItems = shopcartService.findAllShopcartItem(item.getUserId());
+		session.setAttribute("sShopcartItems", sShopcartItems);
 		return "/shopCart";
 	}
 	

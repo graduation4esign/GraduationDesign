@@ -49,15 +49,10 @@
 		<div class="h3_right">
 			<div class="myyy">
 				<a href="userinfo">个人信息</a> <span class="sj_down"></span>
-				<form>
-					<select name="info">
-						<a href="userinfo"><option value="person">个人信息</option></a>
-						<a href="receiveAddress"><option value="receive">收货地址信息</option></a>
-					</select>
-				</form>
+				<a href="receiveAddress">收货地址信息</a> <span class="sj_down"></span>
 			</div>
 			<div class="tsc">
-				<a href="shopCart?userId=${sessionScope.user.id}">去购物车结算</a> <span
+				<a href="toshopCart?userId=${sessionScope.user.id}">去购物车结算</a> <span
 					class="sj_right"></span>
 			</div>
 		</div>
@@ -112,21 +107,9 @@
 					热卖商品<a href="#">更多</a>
 				</h1>
 				<ul>
-					<li><a href="#">〈热〉新款持妆粉底 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红</a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
-					<li><a href="#">〈热〉Chanel新款丝绒口红 </a></li>
+					<c:forEach items="${hotProducts}" var="hotProduct">
+						<li><a href="#">〈热〉${hotProduct.name}</a></li>
+					</c:forEach>
 				</ul>
 			</div>
 			<div style="clear: both"></div>

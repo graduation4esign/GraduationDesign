@@ -19,7 +19,7 @@ public class ProductServiceImpl implements IProductService{
 	@Autowired
 	private ProductMapper productMapper;
 	@Override
-	public List<Product> findHotProduct() {
+	public List<Product> findRecommendProduct() {
 		ProductExample example = new ProductExample();
 		example.createCriteria();
 		List<Product> products = productMapper.selectByExample(example);
@@ -49,7 +49,9 @@ public class ProductServiceImpl implements IProductService{
 	@Override
 	public List<Product> findAllProduct(){
 		ProductExample example = new ProductExample();
-		return productMapper.selectByExample(example);
+		example.createCriteria();
+		List<Product> products = productMapper.selectByExample(example);
+		return products;
 	}
 
 }
