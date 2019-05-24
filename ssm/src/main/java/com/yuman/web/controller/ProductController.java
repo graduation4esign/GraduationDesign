@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yuman.bean.Product;
+import com.yuman.dao.JDBCFactory;
 import com.yuman.service.interf.IProductService;
 
 @Controller
@@ -23,5 +24,15 @@ public class ProductController {
 		System.out.println(productInfo.getId());
 		session.setAttribute("productInfo", productInfo);
 		return "/productInfo";
+	}
+	
+	@RequestMapping(value="/search")
+	public String searchProduct(String search,HttpSession session) {
+		System.out.println(search);
+		JDBCFactory.getConnection();
+		List<Product> products = JDBCFactory.findProductByName(search);
+		System.out.println(products.get(0).toString());
+		session.setAttribute("searchproducts", products);
+		return "list";
 	}
 }

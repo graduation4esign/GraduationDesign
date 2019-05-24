@@ -20,8 +20,8 @@
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index">退出</a>|</li>
-                <li><a href="confirmList">我的订单<span class="jt_down"></span></a>|</li>
+            	<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+                <li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
                 <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>

@@ -112,9 +112,9 @@ input {
 	<div class="top">
 		<div class="top_center">
 			<ul class="top_bars">
-				<li><a href="index">退出</a>|</li>
+				<li><a href="indexSuccess">退出</a>|</li>
 				<li style="background-color: #70A3CE"><a
-					href="javascript:void(0)">我的订单</a>|</li>
+					href="confirmList?userId=${sessionScope.user.id}">我的订单</a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
 			</ul>
@@ -122,7 +122,7 @@ input {
 	</div>
 	<!--头部-->
 	<div class="header3">
-		<a href="index"><img src="images/logo.png" class="oneImg"></a>
+		<a href="indexSuccess"><img src="images/logo.png" class="oneImg"></a>
 
 	</div>
 
@@ -153,7 +153,7 @@ input {
 				<div class="row">
 					<div style="float: left">
 						<div style="margin-left: 80px;">
-							<img src="images/1.png" style="float: left"> <span>${orderline.product.name}</span>
+							<img src="${orderline.product.img}" style="float: left"> <span>${orderline.product.name}</span>
 						</div>
 					</div>
 					<div style="float: right" class="row_right">

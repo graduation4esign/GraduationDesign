@@ -66,8 +66,8 @@ function addShopCart(bookname){
 	<div class="top">
 		<div class="top_center">
 			<ul class="top_bars">
-				<li><a href="index">退出</a>|</li>
-				<li><a href="confirmList">我的订单<span class="jt_down"></span></a>|</li>
+				<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+				<li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
 			</ul>
@@ -95,11 +95,9 @@ function addShopCart(bookname){
 		<div class="nav_top_center">
 			<div>全部化妆品分类</div>
 			<ul>
-				<li><a href="list.html">文学类</a></li>
-				<li><a href="list.html">教育类</a></li>
-				<li><a href="list.html">计算机</a></li>
-				<li><a href="list.html">儿童类</a></li>
-				<li><a href="list.html">漫画类</a></li>
+				<c:forEach items="${details}" var="c">
+					<li><a href="list?cateName=${c.key.name}">${c.key.name}</a></li>
+				</c:forEach>
 			</ul>
 		</div>
 	</div>
@@ -107,7 +105,7 @@ function addShopCart(bookname){
 	<div class="container5">
 		<div class="cn5_top">
 			<div class="cn5_top_x center01">
-				<a class="font20" href="#">书籍</a> > <a href="#">计算机类</a>
+				<a class="font20" href="#">化妆品</a> 
 			</div>
 			<div class="cn5_top_y center01">
 				<div class="cn5topy_1">
@@ -132,7 +130,7 @@ function addShopCart(bookname){
 					<div class="pro_price">
 						<div class="pro_price_x">
 							<p>
-								briup价：<b>￥${sessionScope.productInfo.price}</b> <a href="#">(降价通知)</a>
+								价格：<b>￥${sessionScope.productInfo.price}</b> <a href="#">(降价通知)</a>
 							</p>
 						</div>
 
@@ -215,31 +213,7 @@ function addShopCart(bookname){
 				</div>
 			</div>
 
-			<!--左侧栏-->
-			<div class="c5_b2_left_container">
-				<div class="c5_b2_left box">
-					<h1>服务时间 早9：00~凌晨1：00</h1>
-					<p>
-						<a href="#"> <img class="callmebyqq"
-							src="images/icon_qq_03.png" />
-						</a>
-					</p>
-				</div>
-
-				<div class="c5_b2_left box">
-					<h1>其他种类</h1>
-					<dl>
-						<dd>文学类</dd>
-						<dd>漫画类</dd>
-						<dd>通书类</dd>
-					</dl>
-					<dl>
-						<dd>文学类</dd>
-						<dd>漫画类</dd>
-						<dd>通书类</dd>
-					</dl>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 

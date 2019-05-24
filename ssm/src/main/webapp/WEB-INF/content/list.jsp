@@ -1,8 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>美妆网-首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>商品列表页面</title>
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/icons.css" />
@@ -73,8 +76,8 @@ function addShopCart(bookName){
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index">退出</a>|</li>
-                <li><a href="#">我的订单<span class="jt_down"></span></a>|</li>
+            	<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+                <li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
                 <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
@@ -82,11 +85,13 @@ function addShopCart(bookName){
     </div>
     <!--头部-->
     <div class="header3">
-    	<a href="index.html"><img src="images/logo.png"></a>
+    	<a href="indexSuccess"><img src="images/logo.png"></a>
     	<div class="h3_center">
         	<div class="search_box">
-            	<input type="text"/>
-                <span>搜索</span>
+        		<form action="search" method="get">
+            	<input type="text" name="search"/>
+                <button><span>搜索</span></button>
+                </form>
             </div>
         </div>
         <div class="h3_right">
@@ -106,104 +111,18 @@ function addShopCart(bookName){
             <div>
                 全部化妆品分类
             </div>
-            <ul>
-                <li><a href="list.html">文学类</a></li>
-                <li><a href="list.html">教育类</a></li>
-                <li><a href="list.html">计算机</a></li>
-                <li><a href="list.html">儿童类</a></li>
-                <li><a href="list.html">漫画类</a></li>
-            </ul>
+            
         </div>
     </div>
     
     <!--内容-->
     <div class="container4">
-    	<!--热卖-->
-    	<div class="c4_b1">
-        	<ul class="c4_b1_boxes">
-            	<li>
-                	<img src="images/hot_1.png">
-                    <div class="c4_b1_box_txt">
-                    	<p>Java疯狂讲义 </p>
-                        <h1>活动价：<b>￥69</b></h1>
-                        <h2><a href="#">立即抢购</a></h2>
-                    </div>
-                </li>
-                <li>
-                	<img src="images/hot_1.png">
-                    <div class="c4_b1_box_txt">
-                    	<p>Java疯狂讲义 </p>
-                        <h1>活动价：<b>￥69</b></h1>
-                        <h2><a href="#">立即抢购</a></h2>
-                    </div>
-				</li>
-                <li>
-                	<img src="images/hot_1.png">
-                    <div class="c4_b1_box_txt">
-                    	<p>Java疯狂讲义 </p>
-                        <h1>活动价：<b>￥69</b></h1>
-                        <h2><a href="#">立即抢购</a></h2>
-                    </div>
-				</li>
-                <li>
-                	<img src="images/hot_1.png">
-                    <div class="c4_b1_box_txt">
-                    	<p>Java疯狂讲义 </p>
-                        <h1>活动价：<b>￥69</b></h1>
-                        <h2><a href="#">立即抢购</a></h2>
-                    </div>
-				</li>
-            </ul>
-        </div>
         <div class="c4_b2">
             <h1 class="c4_b2_x">
-            	<a href="#">计算机类&nbsp;&nbsp;&gt;</a>
-                <span><a href="#">计算机类</a></span>
+            	化妆品&nbsp;&nbsp;&gt;
             </h1> 
                 
-            <ul class="c4_b2_y">
-            	<li>
-                	<span class="search_key">价格：</span>
-                    <span class="search_val">0-99</span>
-                    <span class="search_del"></span>
-                </li>
-                <li>
-                	<span class="search_key">出版社：</span>
-                    <span class="search_val">清华出版社</span>
-                    <span class="search_del"></span>
-                </li>
-            </ul>
-        </div>
-        <div class="c4_b3">
-        	<h1></h1>
-        	<div>
-            	<ul class="c4_b3_search">
-                	<li class="c4_b3_name">价格：</li>
-                    <li class="c4_b3_vals">
-                        <a href="#">0-599</a>
-                        <a href="#">600-999</a>
-                        <a href="#">1000-1599</a>
-                        <a href="#">1600-1999</a>
-                        <a href="#">2000-2999</a>
-                        <a href="#">3000-3999</a>
-                        <a href="#">4000-4999</a>
-                        <a href="#">5000-5999</a>
-                        <a href="#">6000-6490</a>
-					</li>
-                </ul>
-               	<ul class="c4_b3_search">
-                	<li class="c4_b3_name">出版社：</li>
-                    <li class="c4_b3_vals">
-                        <a href="#">清华出版社</a>
-                        <a href="#">清华出版社</a>
-						<a href="#">清华出版社</a>
-						<a href="#">清华出版社</a>
-						<a href="#">清华出版社</a>
-						<a href="#">清华出版社</a>
-					</li>
-                </ul>
-            </div>
-        </div>
+       </div>
     	<div class="c4_b4">
         	<div class="c4_b4_x">
             	<ul class="c4_b4_nav">
@@ -224,33 +143,27 @@ function addShopCart(bookName){
        	</div>
     	<!--商品列表-->
         <div class="c4_b5">	
-        	<div class="c4_b5_content">
+        	<div class="c4_b5_content">        	
             	<ul class="c4_b5_c_boxes">
+            	<c:forEach items="${sessionScope.searchproducts}" var="p">
                 	<li class="c4_b5_c_box">
                     	<!--图片-->
                     	<div class="c4_b5_c_box_pic">
                         	<div class="c4b5_pic_view">
-                            	<a href="viewBook.html"><img src="images/list_p1.png"></a>
+                            	<a href="toproductInfo?productId=${p.id}"><img src="${p.img}"></a>
                             </div>
                         </div>
                         <!--价钱-->
                         <div class="c4_b5_c_box_txt">
-                        	<h1>￥ 50</h1>
-                            <h2><a href="viewBook.html">Java编程思想</a></h2>
+                        	<h1>￥ ${p.price}</h1>
+                            <h2><a href="toproductInfo?productId=${p.id}">${p.name}</a></h2>
                         </div>
-                        <!--购买等操作-->
-                        <div class="c4b5_el">
-                        	<div class="c4b5_el_x">
-                            	<span class="wjx01"></span>
-                            </div>
-                        </div>
-                        <ul class="c4b5_option">
-                                <li class="shopcar_box"><span class="shopcar01"></span><a href="javascript:void(0)" onclick="addShopCart('book-1')">加入购物车 </a></li>
-                        </ul>
+         
                     </li>
-                    
+                     </c:forEach>
                     
                 </ul>
+               
             </div>
         </div>
     </div>

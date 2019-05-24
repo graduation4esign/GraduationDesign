@@ -13,7 +13,7 @@
 	<div class="container2">
     	<div class="header2">
         	<div>
-            	<a href="index"><img class="logo" src="images/logon_register.png"></a>
+            	<a href="indexSuccess"><img class="logo" src="images/logon_register.png"></a>
             </div>
             <div>
             	<ul class="tabs">
@@ -29,7 +29,7 @@
 			<ul class="reg_box">
             	<li>
                 	<span><b>*</b>用户名：</span>
-                    <input type="text" name="name"/>
+                    <input type="text" name="username"/>
                 </li>
                <li>
                 	<span><b>*</b>密码：</span>

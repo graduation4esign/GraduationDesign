@@ -23,12 +23,14 @@ public class ProductServiceImpl implements IProductService{
 		ProductExample example = new ProductExample();
 		example.createCriteria();
 		List<Product> products = productMapper.selectByExample(example);
-//		products.sort(Comparator.naturalOrder()); //浠庡皬鍒板ぇ鎺掑簭
-		products.sort(Comparator.reverseOrder()); //浠庡ぇ鍒板皬鎺掑簭
+		//从小到大
+//		products.sort(Comparator.naturalOrder()); 
+		//从大到小
+		products.sort(Comparator.reverseOrder()); 
 		List<Product> list = new ArrayList<>();
 		int i = 0;
 		for (Product product : products) {
-			if (i == 5) {
+			if (i == 3) {
 				break;
 			}
 			list.add(product);

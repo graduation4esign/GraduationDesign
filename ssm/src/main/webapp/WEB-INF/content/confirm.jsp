@@ -46,8 +46,8 @@
 	<div class="top">
 		<div class="top_center">
 			<ul class="top_bars">
-				<li><a href="index">退出</a>|</li>
-				<li><a href="#">我的订单<span class="jt_down"></span></a>|</li>
+				<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+				<li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
 			</ul>
@@ -55,7 +55,7 @@
 	</div>
 	<!--头部-->
 	<div class="header3">
-		<a href="#"><img src="images/logo.png" class="oneImg"></a>
+		<a href="indexSuccess"><img src="images/logo.png" class="oneImg"></a>
 
 
 		<div class="h3_right">
@@ -63,7 +63,7 @@
 		</div>
 
 	</div>
-	<p class="orderButtom">选择并核对订单信息</p>
+	<p class="orderButtom">核对订单商品信息</p>
 	<!--中间复杂部分-->
 	<div class="content">
 		<form action="toaddorder" method="post">
@@ -74,7 +74,7 @@
 				<p class="singleP">
 					<b>送货清单</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>订单号:${sessionScope.orderid}</b>
 
-					<span> <a href="todelorder?orderid=${sessionScope.orderid}">删除该订单</a>
+					<span> <a href="todelorder?orderId=${sessionScope.orderid}">删除该订单</a>
 						&nbsp;&nbsp; <a href="toshopcart">返回购物车修改</a>
 
 					</span>

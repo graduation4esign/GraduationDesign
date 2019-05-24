@@ -234,8 +234,8 @@ input{
 	<div class="top">
     	<div class="top_center">
             <ul class="top_bars">
-            	<li><a href="index">退出</a>|</li>
-                <li><a href="#">我的订单<span class="jt_down"></span></a>|</li>
+            	<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+                <li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
                 <li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
                 <li><a href="#">网站导航<span class="jt_down"></span></a></li>
             </ul>
@@ -243,7 +243,7 @@ input{
     </div>
     <!--头部-->
     <div class="header3">
-    	<a href="index"><img src="images/logo.png"  class="oneImg"></a>
+    	<a href="indexSuccess"><img src="images/logo.png"  class="oneImg"></a>
     	
 
         <div class="h3_right">
@@ -287,7 +287,7 @@ input{
 				</div>
 				<div class="price">￥${item.product.price*item.num}</div><!-- 小结 -->
 				<div>
-					<a href="todeleteshopcart?id=${product.id}">删除</a>
+					<a href="todeleteshopcar?userId=${sessionScope.user.id}&productId=${product.id}">删除</a>
 				</div>
 			</div>
 		</div>	

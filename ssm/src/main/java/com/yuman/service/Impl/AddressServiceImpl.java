@@ -32,5 +32,13 @@ public class AddressServiceImpl implements IAddressService{
 		List<SAddress> addresses = addressMapper.selectByExample(example);
 		return addresses.get(0);
 	}
+
+	@Override
+	public List<SAddress> findAllAddress(BigDecimal userId) {
+		SAddressExample example = new SAddressExample();
+		example.createCriteria().andUserIdEqualTo(userId);
+		List<SAddress> addresses = addressMapper.selectByExample(example);
+		return addresses;
+	}
 	
 }

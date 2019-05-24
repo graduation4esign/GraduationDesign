@@ -22,6 +22,9 @@ public class ShopCartController {
 	public String shopCart(int userId, HttpSession session) {
 		System.out.println("shopCart userId:"+userId);
 		List<SShopcartItem> sShopcartItems = shopcartService.findAllShopcartItem(new BigDecimal(userId));
+		if (sShopcartItems ==null) {
+			return "/emptyCar";
+		}
 		session.setAttribute("sShopcartItems", sShopcartItems);
 
 		return "/shopCart";
@@ -34,6 +37,18 @@ public class ShopCartController {
 		
 		List<SShopcartItem> sShopcartItems = shopcartService.findAllShopcartItem(item.getUserId());
 		session.setAttribute("sShopcartItems", sShopcartItems);
+		return "/shopCart";
+	}
+	
+	@RequestMapping(value="/todeleteshopcar",method=RequestMethod.GET)
+	public String todeleteShopCar(int userId,int productId,HttpSession session) {
+		shopcartService.deleteItem(new BigDecimal(productId));
+		List<SShopcartItem> sShopcartItems = shopcartService.findAllShopcartItem(new BigDecimal(userId));
+		if (sShopcartItems ==null) {
+			return "/emptyCar";
+		}
+		session.setAttribute("sShopcartItems", sShopcartItems);
+
 		return "/shopCart";
 	}
 	

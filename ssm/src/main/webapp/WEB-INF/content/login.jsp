@@ -35,7 +35,7 @@
                     </div>
                     <div class="fg_box">
                     	<a class="fg" href="forgetPassword.html">忘记登陆密码？</a>
-                        <a class="treg" href="toregister">立即注册</a>
+                        <a class="treg" href="register">立即注册</a>
                     </div>
                     <div class="sub_box">
                     	<input type="submit" value="登陆"/>

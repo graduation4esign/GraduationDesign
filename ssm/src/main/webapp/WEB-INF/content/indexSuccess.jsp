@@ -29,8 +29,8 @@
 
 			</ul>
 			<ul class="top_bars">
-				<li><a href="http://localhost:8080/ssm">退出</a>|</li>
-				<li><a href="comfirmList?userId=${sessionScope.user.id}">我的订单<span
+				<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+				<li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span
 						class="jt_down"></span></a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
@@ -42,9 +42,11 @@
 		<a href="#"><img src="images/logo.png"></a>
 		<div class="h3_center">
 			<div class="search_box">
-				<input type="text" /> <span>搜索</span>
-			</div>
-
+        		<form action="search" method="get">
+            	<input type="text" name="search"/>
+                <button><span>搜索</span></button>
+                </form>
+            </div>
 		</div>
 		<div class="h3_right">
 			<div class="myyy">
@@ -60,12 +62,13 @@
 	<!--头部导航-->
 	<div class="nav_top">
 		<div class="nav_top_center">
-			<div>全部图书分类</div>
-			<ul>
+			<div>全部化妆品分类</div>
+			<!--<ul>
 				<c:forEach items="${details}" var="c">
-					<li><a href="list.html">${c.key.name}</a></li>
+					<li><a href="search?search=${c.key.name}">${c.key.name}</a></li>
 				</c:forEach>
 			</ul>
+			  -->
 		</div>
 	</div>
 
@@ -77,11 +80,11 @@
 					<c:forEach items="${categorys}" var="c">
 						<dd>
 							<h1>
-								<a href="toviewbook?cateId=${c.key.id}">${c.key.name}</a>
+								<a href="search?search=${c.key.name}">${c.key.name}</a>
 							</h1>
 							<p>
 								<c:forEach items="${c.value}" var="cd">
-									<a href="list.html">${cd.name}</a>
+									<a href="search?search=${cd.name}">${cd.name}</a>
 								</c:forEach>
 							</p>
 						</dd>
@@ -90,7 +93,7 @@
 			</div>
 			<div class="c3_b1_center">
 				<div>
-					<a href="viewbook.jsp"><img src="images/ad1.jpg"></a>
+					<a href="toproductInfo?productId=28"><img src="images/ad1.jpg"></a>
 				</div>
 				<div class="c3_b1_c_bottom">
 					<ul>
@@ -104,7 +107,7 @@
 			</div>
 			<div class="c3_b1_right">
 				<h1>
-					热卖商品<a href="#">更多</a>
+					热卖商品
 				</h1>
 				<ul>
 					<c:forEach items="${hotProducts}" var="hotProduct">

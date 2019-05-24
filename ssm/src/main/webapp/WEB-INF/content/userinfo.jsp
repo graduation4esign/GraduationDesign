@@ -28,8 +28,8 @@
 	<div class="top">
 		<div class="top_center">
 			<ul class="top_bars">
-				<li><a href="index">退出</a>|</li>
-				<li><a href="confirmList">我的订单<span class="jt_down"></span></a>|</li>
+				<li><a href="http://localhost:10086/ssm">退出</a>|</li>
+				<li><a href="confirmList?userId=${sessionScope.user.id}">我的订单<span class="jt_down"></span></a>|</li>
 				<li><a href="#">关注本站<span class="jt_down"></span></a>|</li>
 				<li><a href="#">网站导航<span class="jt_down"></span></a></li>
 			</ul>
@@ -42,11 +42,7 @@
 			<div class="search_box">
 				<input type="text" /> <span>搜索</span>
 			</div>
-			<p>
-				<a href="list.html">文学类</a>| <a href="list.html">教育类</a>| <a
-					href="list.html">计算机</a>| <a href="list.html">儿童类</a>| <a
-					href="list.html">漫画类</a>|
-			</p>
+			
 		</div>
 		<div class="h3_right">
 			<div class="myyy">
@@ -62,11 +58,9 @@
 		<div class="nav_top_center">
 			<div>全部化妆品分类</div>
 			<ul>
-				<li><a href="list.html">文学类</a></li>
-				<li><a href="list.html">教育类</a></li>
-				<li><a href="list.html">计算机</a></li>
-				<li><a href="list.html">儿童类</a></li>
-				<li><a href="list.html">漫画类</a></li>
+				<c:forEach items="${details}" var="c">
+					<li><a href="list?cateName=${c.key.name}">${c.key.name}</a></li>
+				</c:forEach>
 			</ul>
 		</div>
 	</div>

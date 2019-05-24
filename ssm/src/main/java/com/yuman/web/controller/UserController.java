@@ -56,6 +56,7 @@ public class UserController {
 			System.out.println(user.getDob()+"date");
 			session.setAttribute("user", findUser);
 			System.out.println("userId:"+findUser.getId());
+			//查询推荐商品
 			List<Product> products = productService.findRecommendProduct();
 			System.out.println(products.get(0).getName());
 			session.setAttribute("isSuccess", true);
@@ -74,8 +75,10 @@ public class UserController {
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String register(SUser user, HttpSession session) {
+		System.out.println(user);
 		user.setDob(new Date());
 		int i = userService.register(user);
+		//注册成功返回1
 		if (i == 1) {
 			session.setAttribute("user", user);
 			return "/indexSuccess";

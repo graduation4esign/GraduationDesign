@@ -35,6 +35,13 @@ public class OrderServiceImpl implements IOrderService{
 		return orderMapper.selectByExample(example).get(0);
 	}
 
+	@Override
+	public void deleteOrderByOrderId(String orderId) {
+		SOrderExample example = new SOrderExample();
+		example.createCriteria().andOrderidEqualTo(orderId);
+		orderMapper.deleteByExample(example);
+	}
+
 	
 
 }

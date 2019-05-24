@@ -49,7 +49,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value = "/toaddorder", method = RequestMethod.POST)
-	public String orderInfo(SOrder order, int productId) {
+	public String orderInfo(SOrder order, int productId,HttpSession session) {
 		System.out.println("productId:"+productId);
 		order.setPaystatus(new BigDecimal(0));
 		order.setDob(new Date());
@@ -66,6 +66,8 @@ public class OrderController {
 		orderline.setUserId(findOrder.getUserId());
 		orderlineService.addOrderline(orderline);
 		
+		List<SAddress> allAddress = addressService.findAllAddress(findOrder.getUserId());
+		session.setAttribute("addresses", allAddress);
 		return "/submitOrder";
 	}
 	
@@ -77,10 +79,16 @@ public class OrderController {
 		return "/confirmSuccess";
 	}
 	
-	@RequestMapping(value = "/comfirmList")
-	public String comfirmList(int userId, HttpSession session) {
+	@RequestMapping(value = "/confirmList")
+	public String confirmList(int userId, HttpSession session) {
 		List<Orderline> orderlines = orderlineService.findOrderlineByUserId(new BigDecimal(userId));
 		session.setAttribute("orderlines", orderlines);
-		return "/comfirmList";
+		return "/confirmList";
+	}
+	
+	@RequestMapping(value="/todelorder")
+	public String delorder(String orderId) {
+		orderService.deleteOrderByOrderId(orderId);
+		return"";
 	}
 }

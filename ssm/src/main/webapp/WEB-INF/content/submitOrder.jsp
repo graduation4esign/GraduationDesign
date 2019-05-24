@@ -69,15 +69,26 @@
 			<div class="contentCenter">
 				<input type="hidden" value="${sessionScope.user.id}" name="userId">
 				<div class="centerTop">
-					<b style="font-size: 20px;">选择收货地址信息</b>
 					<p style="font-size: 15px;">
-						收件人姓名：<input type="text" id='addName' name="rName"
+						<form action="" method="get"> 
+							<label style="font-size: 20px;">选择收货地址</label> 
+							<select name=""> 
+							<c:forEach items="${sessionScope.addresses}" var="a">
+							<option value="${a.id}">${a.rAddress}</option> 
+							</c:forEach>
+							</select> 
+						</form>
+					<!-- 	收件人姓名：<input type="text" id='addName' name="rName"
 							value="${sessionScope.address.rName}"><br /> <br />
 						收件人地址：<input type="text" id='addAdd' name="rAddress"
 							value="${sessionScope.address.rAddress}"><br /> <br />
 						收件人电话：<input type="text" id='addPhone' name="rPhone"
 							value="${sessionScope.address.rPhone}">
+							 -->
 					</p>
+					
+					
+					
 					<p style="font-size: 15px;">
 						<!-- <button
 							onclick="document.getElementById('divDialog').style.display=''">添加收件人</button> -->
@@ -87,10 +98,6 @@
 				<p class="singleP">
 					<b>送货清单</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>订单号:${sessionScope.orderid}</b>
 
-					<span> <a href="todelorder?orderid=${sessionScope.orderid}">删除该订单</a>
-						&nbsp;&nbsp; <a href="toshopcart">返回购物车修改</a>
-
-					</span>
 				</p>
 				<div class="bigDiv">
 
@@ -112,7 +119,7 @@
 				</div>
 
 				<div class="submit">
-					<span>应付金额：<font>${sum}</font>
+					<span>应付金额：<font></font>
 					<button type="submit" onclick="document.forms.conSuccess.submit()">
 							<img alt="" src="images/21_03.png">
 						</button>
